@@ -1,0 +1,7 @@
+{
+  "version": "1",
+  "elements": {
+    "geometry": {"color": "#242f3e"},
+    "labels.text.fill": {"color": "#746855"}
+  }
+}

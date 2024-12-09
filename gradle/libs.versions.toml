@@ -1,0 +1,66 @@
+[versions]
+agp = "8.6.1"
+kotlin = "1.9.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.9.3"
+composeBom = "2024.11.00"
+mapsCompose = "6.4.0"
+playServicesLocation = "21.3.0"
+playServicesMaps = "19.0.0"
+work = "2.10.0"
+koin = "4.0.0"
+koinCompose = "3.5.3"
+retrofit = "2.11.0"
+retrofitSerialiazationConverter = "1.0.0"
+serializationJson = "1.7.3"
+coroutines = "1.9.0"
+okhttp3 = "4.12.0"
+room = "2.6.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+work-runtime = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
+work-testing = { module = "androidx.work:work-testing", version.ref = "work" }
+workmanager-koin = { module = "io.insert-koin:koin-androidx-workmanager", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
+okhttp3 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp3" }
+room-runtime = { module = "androidx.room:room-runtime" , version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+retrofit = { module = "com.squareup.retrofit2:retrofit" , version.ref = "retrofit" }
+retrofit-serialization = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofitSerialiazationConverter" }
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" , version.ref = "coroutines" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android" , version.ref = "coroutines" }
+serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serializationJson" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+#jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+[bundles]
+#compose = ["compose.ui", "compose.ui.graphics", "compose.ui.tooling", "compose.material3", "compose.viewmodel", "coil-compose", "compose-lifecycle"]
+koin = ["koin-core", "koin-android", "koin-android-compose"]
+networking = ["retrofit", "retrofit-serialization", "serialization-json", "coroutines", "coroutines-android", "okhttp3"]
